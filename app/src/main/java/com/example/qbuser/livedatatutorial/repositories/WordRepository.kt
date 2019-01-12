@@ -17,7 +17,7 @@ class WordRepository(application: Application){
         listwords = worddao.getAllWords()
     }
 
-    fun getallword(){
+    fun getallword(): List<Words>{
         return listwords
     }
 

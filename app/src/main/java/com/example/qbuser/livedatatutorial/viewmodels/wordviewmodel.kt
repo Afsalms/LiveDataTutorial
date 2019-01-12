@@ -20,5 +20,9 @@ class wordviewmodel(application: Application): AndroidViewModel(application) {
 
     }
 
+    fun getallword(): List<Words>{
+        return wordlist
+    }
+
 
 }

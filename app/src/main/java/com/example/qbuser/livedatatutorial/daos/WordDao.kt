@@ -13,5 +13,5 @@ interface WordDao {
     fun addNewWord(word: Words)
 
     @Query("select * from words ORDER by id DESC")
-    fun getAllWords: List<Words>
+    fun getAllWords(): List<Words>
 }
