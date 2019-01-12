@@ -5,8 +5,9 @@ import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 import com.example.qbuser.livedatatutorial.daos.WordDao
+import com.example.qbuser.livedatatutorial.models.Words
 
-@Database(entities = arrayOf(Task::class), version = 1)
+@Database(entities = arrayOf(Words::class), version = 1)
 abstract class DatabaseHelper: RoomDatabase() {
 
     abstract fun wordDao(): WordDao
@@ -18,7 +19,7 @@ abstract class DatabaseHelper: RoomDatabase() {
                 INSTANCE = Room.databaseBuilder(
                     context,
                     DatabaseHelper::class.java,
-                    "liveDataTest")
+                    "liveData")
                     .build()
             }
             return INSTANCE as DatabaseHelper
